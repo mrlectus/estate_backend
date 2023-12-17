@@ -1,0 +1,36 @@
+## register admin
+POST http://127.0.0.1:4000/admin/register
+Content-Type: application/json
+
+{
+  "email": "majimoh2000@gmail.com",
+  "password": "superadmin"
+}
+
+
+## login admin
+POST http://127.0.0.1:4000/admin/login
+Content-Type: application/json
+
+{
+  "email": "majimoh2000@gmail.com",
+  "password": "superadmin"
+}
+
+## login admin
+POST http://127.0.0.1:4000/admin/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6IjgyOTNkYTAzLTU1MTktNGQ3OC05MzQwLTRkMzJkNDA1MDU1OCIsInBhc3N3b3JkIjoiJDJiJDEwJGVvTXhrdDV1allqQTdnNWZDZEFQaXVNRXI4ZWsuckhlNDFWMjJQS2c5RDN5bXZTWjZxSjZhIiwiZW1haWwiOiJtYWppbW9oMjAwMEBnbWFpbC5jb20iLCJpYXQiOjE2ODY1OTgyNDIsImV4cCI6MTY4NjY4NDY0Mn0._Wr0PZMbge-_LHRHmspoywi8R4kG0ATnf8HiJm4CmkI
+
+{
+  "email": "majimoh2000@gmail.com",
+  "password": "superadmin123"
+}
+
+PUT http://127.0.0.1:4000/admin/edit_property/5f8d15f0-6b02-44aa-b25a-8dcae6718fa5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6ImNiNGRjZTUyLTZkZjYtNDMwNi05MzBiLWM0MzFhNmE3Mzc3YSIsInBhc3N3b3JkIjoiJDJiJDEwJFNnQjU1UTlCZ3BNQWdEODhMLlZNOC5EZ3lqOUtBekV3WlFsdTcwZnVHU3lhZ1QwUnZCS1BlIiwiZW1haWwiOiJtYWppbW9oMjAwMEBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDIzLTA2LTI2VDAxOjQzOjA3LjY0NVoiLCJ1cGRhdGVkQXQiOiIyMDIzLTA2LTI2VDAxOjQzOjA3LjY0NVoiLCJpYXQiOjE2OTU2NDI2MTIsImV4cCI6MTY5NTcyOTAxMn0.6JFv92PUuE1YQo2p8hwaEr0fooGZpLAXf7_nlZImEeo
+
+{
+  "bathroom": 200
+}

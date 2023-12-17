@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  admin_id  String   @id @default(uuid())
+  password  String
+  email     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Listing {
+  listing_id      String   @id @default(uuid())
+  property_type   String
+  description     String
+  price           Int      @default(0)
+  address         String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  city            String
+  state           String
+  size            Int
+  bedrooms        Int?
+  bathrooms       Int?
+  kitchen         Int?
+  property_status String // For sale or for rent
+  image           String
+  images          Json
+  available       Boolean  @default(true) // sold or not sold
+}
